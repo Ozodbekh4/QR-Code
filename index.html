@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <main>
+
+            <div class="main_header">
+
+                <div class="main_header_options">
+
+                    <h2>Set color</h2>
+
+                    <div class="main_header_options_colorBox">
+
+                        <div class="main_header_options_colorBox_item white"></div>
+                        <div class="main_header_options_colorBox_item black"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="main_header_text">
+                    <h1>QRcode</h1>
+                    <p>generator</p>
+                </div>
+
+            </div>
+
+            <div class="main_box">
+
+                <div class="main_box_qrcode">
+                    <div id="canvas"></div>
+                </div>
+
+                <div class="main_box_form">
+
+                    <label for="">Submit URL or text</label>
+                    <input type="text" name="" id="url" placeholder="Enter text or URL here ">
+
+                    <label for="file">
+                        Insert Image
+
+                        <input type="file" class="file" id="file">
+
+                        <div class="button_d">
+
+                            <span class="btn__icon">
+                                <svg stroke-linejoin="round" stroke-linecap="round" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" viewBox="0 0 24 24" height="24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+                                    <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1"></path>
+                                    <path d="M9 15l3 -3l3 3"></path>
+                                    <path d="M12 12l0 9"></path>
+                                </svg>
+                            </span>
+
+                            <span class="btn__text">Upload</span>
+
+                        </div>
+
+                    </label>
+
+
+                    <button class="button">Generate</button>
+
+                </div>
+
+            </div>
+
+            <div class="main_btn">
+
+                <button class="download">Download</button>
+
+                <div class="main_btn_img">
+                    <img src="img/GitHub.png" alt="">
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

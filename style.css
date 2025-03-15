@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-image: url(img/bg-purple.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container main {
+  width: 100%;
+  max-width: 710px;
+  border-radius: 48px;
+  background-color: rgba(178, 33, 246, 0.09);
+  -webkit-backdrop-filter: blur(14.4px);
+          backdrop-filter: blur(14.4px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 42px 55px;
+}
+.container main .main_header {
+  width: 100%;
+  max-width: 490px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 15px;
+}
+.container main .main_header .main_header_text {
+  text-align: center;
+}
+.container main .main_header .main_header_text h1 {
+  font-family: "Monda";
+  font-size: 48px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 139.6%;
+}
+.container main .main_header .main_header_text p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Monda";
+  line-height: 139.6%;
+  color: #fff;
+  letter-spacing: 4px;
+}
+.container main .main_header .main_header_options {
+  text-align: center;
+}
+.container main .main_header .main_header_options h2 {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Monda";
+  line-height: 139.6%;
+  color: #fff;
+}
+.container main .main_header .main_header_options .main_header_options_colorBox {
+  display: flex;
+  width: 100%;
+  max-width: 130px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 34px;
+  margin-top: 11px;
+}
+.container main .main_header .main_header_options .main_header_options_colorBox .main_header_options_colorBox_item {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+}
+.container main .main_header .main_header_options .main_header_options_colorBox .main_header_options_colorBox_item:first-of-type {
+  background-color: #fff;
+}
+.container main .main_header .main_header_options .main_header_options_colorBox .main_header_options_colorBox_item:last-of-type {
+  background-color: #000;
+}
+.container main .main_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 23px;
+}
+.container main .main_box .main_box_qrcode {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 18px;
+}
+.container main .main_box .main_box_form {
+  width: 100%;
+  max-width: 248px;
+  display: flex;
+  flex-direction: column;
+}
+.container main .main_box .main_box_form label {
+  font-size: 16px;
+  font-family: "Monda";
+  font-weight: 400;
+  line-height: 139.6%;
+  color: #fff;
+  padding-left: 12px;
+}
+.container main .main_box .main_box_form label:last-of-type {
+  margin-top: 12px;
+}
+.container main .main_box .main_box_form input {
+  margin-top: 3px;
+  width: 100%;
+  max-width: 248px;
+  border-radius: 25px;
+  height: 33px;
+  padding-left: 15px;
+  border: none;
+  background-color: rgb(50, 27, 67);
+  font-size: 16px;
+  font-family: "Monda";
+  font-weight: 400;
+  line-height: 139.6%;
+  color: #fff;
+}
+.container main .main_box .main_box_form input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.15);
+}
+.container main .main_box .main_box_form input::placeholder {
+  color: rgba(255, 255, 255, 0.15);
+}
+.container main .main_box .main_box_form input[type=file] {
+  display: none;
+}
+.container main .main_box .main_box_form .button {
+  margin-top: 26px;
+  width: 100%;
+  max-width: 152px;
+  display: block;
+  margin: auto;
+  padding: 9px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: "Monda";
+  font-weight: bold;
+  line-height: 139.6%;
+  color: #fff;
+  background-color: rgb(119, 61, 166);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.container main .main_box .main_box_form .button:hover {
+  opacity: 0.8;
+}
+.container main .main_box .main_box_form .button_d {
+  width: 100%;
+  background-color: rgb(119, 61, 166);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  padding-right: 1rem;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Monda";
+  font-weight: bold;
+  line-height: 139.6%;
+  white-space: nowrap;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.container main .main_box .main_box_form .button_d:hover {
+  opacity: 0.8;
+}
+.container main .main_btn {
+  margin-top: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.container main .main_btn button {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  padding: 9px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: "Monda";
+  font-weight: bold;
+  line-height: 139.6%;
+  color: #fff;
+  background-color: rgb(119, 61, 166);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.container main .main_btn button:hover {
+  opacity: 0.8;
+}
+.container main .main_btn .main_btn_img {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.container main .main_btn .main_btn_img img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
