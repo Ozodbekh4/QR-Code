@@ -2,10 +2,10 @@ const button = document.querySelector(".button");
 const urlInput = document.querySelector("#url");
 const fileInput = document.querySelector(".file");
 
-function Qrcode(url, color, backgroundColor, isDownload, insideImg) {
+function Qrcode(url, color, backgroundColor, isDownload, insideImg, width = 280, height = 280) {
     const qrCode = new QRCodeStyling({
-        width: 280,
-        height: 280,
+        width: width,
+        height: height,
         type: "svg",
         data: url,
         image: insideImg,
@@ -29,6 +29,8 @@ function Qrcode(url, color, backgroundColor, isDownload, insideImg) {
     }
 }
 
+Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp")
+
 // ** Asosiy Generate tugmasi bosilganda**
 button.addEventListener("click", function () {
     if (fileInput.files.length > 0) {
@@ -45,6 +47,17 @@ button.addEventListener("click", function () {
 
 // ** Oq rang tugmasi bosilganda**
 document.querySelector(".white").addEventListener("click", function () {
+
+    if (this.window.screen.availWidth <= 380) {
+        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 200, 200);
+        console.log("Ishladi");
+    } else {
+        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 280, 280);
+    }
+
+    document.querySelector(".black").style.border = "none";
+    document.querySelector(".white").style.border = "2px solid blue";
+
     if (fileInput.files.length > 0) {
         let reader = new FileReader();
         reader.onload = function (event) {
@@ -60,6 +73,17 @@ document.querySelector(".white").addEventListener("click", function () {
 
 // ** Qora rang tugmasi bosilganda**
 document.querySelector(".black").addEventListener("click", function () {
+
+    if (this.window.screen.availWidth <= 380) {
+        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 200, 200);
+        console.log("Ishladi");
+    } else {
+        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 280, 280);
+    }
+
+    document.querySelector(".black").style.border = "2px solid blue";
+    document.querySelector(".white").style.border = "none";
+
     if (fileInput.files.length > 0) {
         let reader = new FileReader();
         reader.onload = function (event) {
@@ -86,3 +110,20 @@ document.querySelector(".download").addEventListener("click", function () {
         Qrcode(urlInput.value, "#000", "#fff", true, "../img/logo-big.png");
     }
 });
+
+
+window.addEventListener("resize", function () {
+    if (this.window.screen.availWidth <= 380) {
+        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 200, 200);
+        console.log("Ishladi");
+    } else {
+        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 280, 280);
+    }
+});
+
+if (this.window.screen.availWidth <= 380) {
+    Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 200, 200);
+    console.log("Ishladi");
+} else {
+    Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 280, 280);
+}

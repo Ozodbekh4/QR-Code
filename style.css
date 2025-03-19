@@ -7,7 +7,7 @@
 
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
   background-image: url(img/bg-purple.png);
   background-repeat: no-repeat;
@@ -85,6 +85,7 @@
 }
 .container main .main_header .main_header_options .main_header_options_colorBox .main_header_options_colorBox_item:last-of-type {
   background-color: #000;
+  border: 2px solid blue;
 }
 .container main .main_box {
   width: 100%;
@@ -96,7 +97,7 @@
 .container main .main_box .main_box_qrcode {
   width: 100%;
   max-width: 300px;
-  height: 300px;
+  min-height: 300px;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -119,7 +120,7 @@
   padding-left: 12px;
 }
 .container main .main_box .main_box_form label:last-of-type {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .container main .main_box .main_box_form input {
   margin-top: 3px;
@@ -223,4 +224,49 @@
 }
 .container main .main_btn .main_btn_img img {
   width: 100%;
+}
+
+@media screen and (max-width: 670px) {
+  .container {
+    padding: 20px;
+    align-items: flex-start !important;
+  }
+  .container main {
+    min-width: 100% !important;
+    padding: 22px 25px;
+  }
+  .container main .main_header {
+    flex-direction: column-reverse;
+  }
+  .container main .main_box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container main .main_box .main_box_qrcode {
+    padding: 6px;
+  }
+  .container main .main_box .main_box_qrcode #canvas svg {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .container main .main_box .main_box_form {
+    margin-top: 20px;
+    max-width: 100% !important;
+    padding-top: 0 !important;
+  }
+  .container main .main_box .main_box_form label {
+    padding: 0 !important;
+  }
+  .container main .main_box .main_box_form input {
+    width: 100%;
+    max-width: 100% !important;
+  }
+  .container main .main_box .main_box_form .button {
+    margin-top: 20px !important;
+    max-width: 100% !important;
+  }
+  .container main .main_btn button {
+    min-width: 100% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
