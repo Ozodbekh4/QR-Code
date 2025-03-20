@@ -48,13 +48,6 @@ button.addEventListener("click", function () {
 // ** Oq rang tugmasi bosilganda**
 document.querySelector(".white").addEventListener("click", function () {
 
-    if (this.window.screen.availWidth <= 380) {
-        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 200, 200);
-        console.log("Ishladi");
-    } else {
-        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 280, 280);
-    }
-
     document.querySelector(".black").style.border = "none";
     document.querySelector(".white").style.border = "2px solid blue";
 
@@ -73,13 +66,6 @@ document.querySelector(".white").addEventListener("click", function () {
 
 // ** Qora rang tugmasi bosilganda**
 document.querySelector(".black").addEventListener("click", function () {
-
-    if (this.window.screen.availWidth <= 380) {
-        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 200, 200);
-        console.log("Ishladi");
-    } else {
-        Qrcode("https://qr-code-navy-three.vercel.app/", "#000", "#fff", false, "../img/scan_me.webp", 280, 280);
-    }
 
     document.querySelector(".black").style.border = "2px solid blue";
     document.querySelector(".white").style.border = "none";
